@@ -39,12 +39,12 @@ public class LabelTest {
     }
 
     @Test
-    public void requestIndexHtml_ThenBodyContainsPostConstructValue() {
+    public void requestHtmlPage_ThenBodyContainsPostConstructValue() {
         assertEquals("HELLO", getBodyValue());
     }
 
     @Test
-    public void manipulateInjectedObjectAndRequestIndexHtml_ThenBodyContainsValueOfManipulatedInjectedObject() {
+    public void manipulateInjectedObjectAndRequestHtmlPage_ThenBodyContainsValueOfManipulatedInjectedObject() {
         // how is it possible to manipulate the injected object with value=MY_VALUE?
         assertEquals("MY_VALUE", getBodyValue());
     }
