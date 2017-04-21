@@ -1,0 +1,26 @@
+group 'hfe'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        output.resourcesDir = "build/classes/main"
+    }
+    test {
+        output.resourcesDir = "build/classes/test"
+    }
+}
+
+dependencies {
+    compileOnly 'org.apache.tomee:javaee-api:7.0-1'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.seleniumhq.selenium:selenium-java:3.3.1'
+    testCompile 'org.apache.tomee:tomee-embedded:7.0.3'
+}
